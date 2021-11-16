@@ -254,21 +254,31 @@ add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 function lorainccc_welded_foundation_scripts() {
  
-  // Add Genericons, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
+	/* ----- Add Foundation Support ----- */
+	/* Add Foundation CSS */
+	
+	wp_enqueue_style( 'genericons', get_stylesheet_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
  
-	wp_enqueue_style( 'foundation-app',  get_template_directory_uri() . '/foundation/css/app.css' );
-	wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
-	wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation/css/foundation.css' );
+	/* Add Foundation JS */
+	
+	wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation-643/css/foundation.css' );
 
-	wp_enqueue_script( 'lc-mobile-nav-js', get_stylesheet_directory_uri() . '/js/mobile-nav.js', array( 'jquery' ), '1', true );
-
-	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation/js/vendor/foundation.js', array( 'jquery' ), '1', true );
-	wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation/js/vendor/what-input.js', array( 'jquery' ), '1', true);
-
-	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation-643/js/vendor/foundation.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation-643/js/vendor/what-input.js', array( 'jquery' ), '1', true);
+	/* Foundation Init JS */
+	
+	wp_enqueue_script( 'foundation-init-js', get_stylesheet_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+	
+		/* Foundation Icons */
+	if ( wp_style_is( 'foundation_font_icon_css', 'enqueued' ) ) {
+		return;
+	}else{
+			wp_enqueue_style('foundation_font_icon_css', get_template_directory_uri() . '/foundation-icons/foundation-icons.css');
+	}
+	/* ----- End Foundation Support ----- */
 
 	wp_enqueue_script( 'lorainccc_welded-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
+	/** Custom jQuery script that reformats the dropdown menu to a drilldown when viewed on a smaller screen size than desktop */
 	wp_enqueue_script( 'lc_menu-cleanup-script', get_stylesheet_directory_uri() . '/js/menu-cleanup.js', array( 'jquery' ), '20190329', true );
 		//Adds Google Analytics, Google Tag, Hotjar and Eloqua to header
 	wp_enqueue_script( 'wd-google-analytics-scripts', get_stylesheet_directory_uri() . '/js/lc-google-analytics.js', array(), '20180828', false);
