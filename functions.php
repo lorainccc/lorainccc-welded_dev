@@ -56,7 +56,7 @@ function lorainccc_welded_setup() {
 		/** Keep the above menu positions we use a plugin to cache the first 9 menus defined across the site.
 		 *  Anything defined below these positions will be accessible to the site and this site only on the network.
 		*/
-
+		'menu-1' => esc_html__( 'Primary', 'lorainccc_welded' ),
 
 	) );
 	/*
@@ -69,6 +69,8 @@ function lorainccc_welded_setup() {
 		'comment-list',
 		'gallery',
 		'caption',
+		'style',
+		'script',
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -76,6 +78,24 @@ function lorainccc_welded_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Add theme support for selective refresh for widgets.
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	/**
+	 * Add support for core custom logo.
+	 *
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		)
+	);
 }
 endif;
 add_action( 'after_setup_theme', 'lorainccc_welded_setup' );
@@ -107,133 +127,26 @@ function lorainccc_welded_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-		register_sidebar( array(
-		'name'          => esc_html__( 'Gateway Menu Sidebar', 'lorainccc_welded' ),
-		'id'            => 'gateway-menu-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-			register_sidebar( array(
-		'name'          => esc_html__( 'Calendar Sidebar', 'lorainccc_welded' ),
-		'id'            => 'calendar-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-		register_sidebar( array(
-		'name'          => esc_html__( 'Sub Site Announcement Sidebar', 'lorainccc_welded' ),
-		'id'            => 'sub-site-announcements-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-		register_sidebar( array(
-		'name'          => esc_html__( 'Dashboard Icons Sidebar', 'lorainccc_welded' ),
-		'id'            => 'cta-icons-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Spotlights Sidebar', 'lorainccc_welded' ),
-		'id'            => 'lccc-spotlights-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-		register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Highlights Sidebar', 'lorainccc_welded' ),
-		'id'            => 'lccc-highlights-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-			register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Events Sidebar', 'lorainccc_welded' ),
-		'id'            => 'lccc-events-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-			register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Announcements Sidebar', 'lorainccc_welded' ),
-		'id'            => 'lccc-announcements-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-			register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Badges Sidebar', 'lorainccc_welded' ),
-		'id'            => 'lccc-badges-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-		register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Program Pathways Sidebar', 'lorainccc_welded' ),
-		'id'            => 'lccc-programpathways-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-			register_sidebar( array(
-		'name'          => esc_html__( 'LCCC 404 Sidebar', 'lorainccc_welded' ),
-		'id'            => 'lccc-four-o-four-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc_welded' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
- 	register_sidebar( array(
-		'name'          => esc_html__( 'LCCC Search Sidebar', 'lorainccc' ),
-		'id'            => 'lccc-search-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-  	register_sidebar( array(
-		'name'          => esc_html__( 'Presidents Twitter Feed', 'lorainccc' ),
-		'id'            => 'lccc-president-twitter-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-  	register_sidebar( array(
-		'name'          => esc_html__( 'Presidents in the News Section', 'lorainccc' ),
-		'id'            => 'lccc-president-in-news',
-		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	register_sidebar( 
+		array(
+			'name'          => 'Custom Header Widget Area',
+			'id'            => 'header-widgets',
+			'before_widget' => '<div class="header__widgets">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="header__widgets__title">',
+			'after_title'   => '</h2>',
+		) 
+	);
+	register_sidebar(
+		array(
+			'name' 			=> 'Custom Footer Widget Area',
+			'id' 			=> 'footer-widgets',
+			'before_widget'	=> '<div class="footer__widgets">',
+			'after_widget'	=> '</div>',
+			'before_title'	=> '<h2 class="footer__widgets__title">',
+			'after_title'	=> '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'lorainccc_welded_widgets_init' );
 
@@ -241,9 +154,9 @@ add_action( 'widgets_init', 'lorainccc_welded_widgets_init' );
  * Enqueue google fonts.
  */
 function add_google_fonts() {
-wp_enqueue_style( 'open-sans-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic&dispay=swap', false );
-wp_enqueue_style( 'raleway-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700&dispay=swap', false );
-
+	wp_enqueue_style( 'open-sans-google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap', [], null );
+	wp_enqueue_style( 'lato-google-fonts', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap', [], null );
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
@@ -325,7 +238,6 @@ require get_stylesheet_directory() . '/inc/customizer.php';
  */
 require get_stylesheet_directory() . '/inc/jetpack.php';
 
-require get_stylesheet_directory() . '/inc/lc-calendar-add-buttons.php';
 
 /* Use Paste As Text by default in the editor
 ----------------------------------------------------------------------------------------*/
@@ -334,236 +246,4 @@ add_filter('tiny_mce_before_init', 'lc_tinymce_paste_as_text', 1, 2);
 function lc_tinymce_paste_as_text( $mceInit, $editor_id ) {
 	$mceInit['paste_as_text'] = true;
 	return $mceInit;
-}
-
-/* Menu Functions */
-
-class lc_top_bar_menu_walker extends Walker_Nav_Menu
-{
-	/*
-	 * Add vertical menu class and submenu data attribute to sub menus
-	 */
-
-	function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat("\t", $depth);
-		$output .= "\n$indent<ul class=\"vertical menu\" data-submenu>\n";
-	}
-}
-
-//Optional fallback
-function lc_topbar_menu_fallback($args)
-{
-	/*
-	 * Instantiate new Page Walker class instead of applying a filter to the
-	 * "wp_page_menu" function in the event there are multiple active menus in theme.
-	 */
-
-	$walker_page = new Walker_Page();
-	$fallback = $walker_page->walk(get_pages(), 0);
-	$fallback = str_replace("<ul class='children'>", '<ul class="children submenu menu vertical" data-submenu>', $fallback);
-
-	echo '<ul class="dropdown menu" data-dropdown-menu">'.$fallback.'</ul>';
-}
-
-class lc_drill_menu_walker extends Walker_Nav_Menu
-{
-	/*
-	 * Add vertical menu class
-	 */
-
-	function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat("\t", $depth);
-		$output .= "\n$indent<ul class=\"vertical menu\">\n";
-	}
-}
-
-function lc_drill_menu_fallback($args)
-{
-	/*
-	 * Instantiate new Page Walker class instead of applying a filter to the
-	 * "wp_page_menu" function in the event there are multiple active menus in theme.
-	 */
-
-	$walker_page = new Walker_Page();
-	$fallback = $walker_page->walk(get_pages(), 0);
-	$fallback = str_replace("children", "children vertical menu", $fallback);
-	echo '<ul class="vertical menu" data-drilldown="">'.$fallback.'</ul>';
-}
-
-/* End Menu Functions */
-// CHANGE EXCERPT LENGTH FOR DIFFERENT POST TYPES
-
-function custom_excerpt_length($length) {
-    global $post;
-    if ($post->post_type == 'lccc_event')
-    return 30;
-    else if ($post->post_type == 'lccc_announcement')
-    return 70;
-    else
-    return 40;
-}
-add_filter('excerpt_length', 'custom_excerpt_length');
-
-function lccc_custom_taxonomy_dropdown( $taxonomy ) {
-	$currenttax = str_replace("%body%", "black", "<body text='%body%'>");
-	$args = array(
-				'orderby' => 'name',
-				'order' => 'ASC',
-	);
-	$terms = get_terms( $taxonomy , $args );
-	if ( $terms ) {
-		printf( '<select name="%s" class="postform" onchange="location = this.options[this.selectedIndex].value;">', esc_attr( $taxonomy ) );
-		printf('<option value="/security/daily-crime-log/">Select</option>');
-		foreach ( $terms as $term ) {
-			printf( '<option value="'.get_bloginfo('url').'/'.str_replace('_', '-', $taxonomy).'/%s">%s</option>', esc_attr( $term->slug ), esc_html( $term->name ) );
-		}
-		print( '</select>' );
-	}
-}
-
-// Removing Default Jetpack Sharing Button Filters
-
-function jptweak_remove_share() {
-    remove_filter( 'the_content', 'sharing_display',19 );
-    remove_filter( 'the_excerpt', 'sharing_display',19 );
-    if ( class_exists( 'Jetpack_Likes' ) ) {
-        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
-    }
-}
- 
-add_action( 'loop_start', 'jptweak_remove_share' );
-
-
-function add_paged_var($public_query_vars) {
-    $public_query_vars[] = 'page';
-    return $public_query_vars;
-}
-add_filter('query_vars', 'add_paged_var');
-
-function do_rewrite() {
-    add_rewrite_rule('day/([^/]+)/?$', 'index.php?pagename=day&d=$matches[1]','top');
-}
-
-add_action('init', 'do_rewrite');
-
-function get_url_var($name)
-{
-    $strURL = $_SERVER['REQUEST_URI'];
-    $arrVals = split("/",$strURL);
-    $found = 0;
-    foreach ($arrVals as $index => $value) 
-    {
-        if($value == $name) $found = $index;
-    }
-    $place = $found + 1;
-   return $arrVals[$place];
-}
-
-function wpbeginner_numeric_posts_nav() {
-
-	if( is_singular() )
-		return;
-
-	global $wp_query;
-
-	/** Stop execution if there's only 1 page */
-	if( $wp_query->max_num_pages <= 1 )
-		return;
-
-	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-	$max   = intval( $wp_query->max_num_pages );
-
-	/**	Add current page to the array */
-	if ( $paged >= 1 )
-		$links[] = $paged;
-
-	/**	Add the pages around the current page to the array */
-	if ( $paged >= 3 ) {
-		$links[] = $paged - 1;
-		$links[] = $paged - 2;
-	}
-
-	if ( ( $paged + 2 ) <= $max ) {
-		$links[] = $paged + 2;
-		$links[] = $paged + 1;
-	}
-
-	echo '<div class="navigation"><ul>' . "\n";
-
-	/**	Previous Post Link */
-	if ( get_previous_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
-
-	/**	Link to first page, plus ellipses if necessary */
-	if ( ! in_array( 1, $links ) ) {
-		$class = 1 == $paged ? ' class="active"' : '';
-
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-		if ( ! in_array( 2, $links ) )
-			echo '<li>…</li>';
-	}
-
-	/**	Link to current page, plus 2 pages in either direction if necessary */
-	sort( $links );
-	foreach ( (array) $links as $link ) {
-		$class = $paged == $link ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-	}
-
-	/**	Link to last page, plus ellipses if necessary */
-	if ( ! in_array( $max, $links ) ) {
-		if ( ! in_array( $max - 1, $links ) )
-			echo '<li>…</li>' . "\n";
-
-		$class = $paged == $max ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-	}
-
-	/**	Next Post Link */
-	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
-
-	echo '</ul></div>' . "\n";
-
-}
-
- /** Custom posts per page limit for Student News */
-
-	function lc_student_news_query( $query ){
-    if( ! is_admin()
-        && $query->is_post_type_archive( 'student_news' )
-        && $query->is_main_query() ){
-            $query->set( 'posts_per_page', 5 );
-    }
-	}
-	add_action( 'pre_get_posts', 'lc_student_news_query' );
-
- /** End Custom posts per page limit for Student News */
-
- /** Custom posts per page limit for Faculty Staff Directory */
-
-function lc_facstaff_directory_query( $query ){
-    if( ! is_admin()
-        && $query->is_post_type_archive( 'faculty_staff_dir' )
-        && $query->is_main_query() ){
-            $query->set( 'posts_per_page', 25 );
-    }
-	}
-add_action( 'pre_get_posts', 'lc_facstaff_directory_query' );
-
-function lc_facstaff_directory_order( $orderby ) {
-	global $wpdb;
-	
-	// Check if the query is for an archive
-	if ( is_archive() && get_query_var("post_type") == "faculty_staff_dir" ) {
-		// Query was for archive, then set order
-		return "$wpdb->posts.post_title ASC";
-	}
-	
-	return $orderby;
-}
-
-if(is_admin()){
-	add_filter( 'posts_orderby' , 'lc_facstaff_directory_order' );
 }

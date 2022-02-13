@@ -1,32 +1,45 @@
 <?php
+/**
+ * The template for displaying search results pages.
+ *
+ * @package LCCC Framework
+ */
 
-get_header();
-?>
-<div class="row">
-	<div class="small-12 columns">
-		<h1><?php printf( esc_html__( 'Search Results for: %s', 'lorainccc' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-	</div>
-</div>
-<div class="row">
-	<div class="small-12 columns">
-<?php	
+get_header(); ?>
 
- while ( have_posts() ) : the_post();
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-		switch_to_blog($post->blog_id);
-	 
-		get_template_part( 'template-parts/content', 'search' );
-  
-		restore_current_blog();
-		
- endwhile; // end of the loop.
-?>
-		<div style="float:left;"><?php previous_posts_link( '&laquo; Previous Results' ) ?></div>
-		<div style="float:right;"><?php next_posts_link( '&raquo; More Results' ) ?></div>
-		<div style="clear:both;"></div>
-	</div>
-</div>
-	<?php
-get_footer();
+		<?php if ( have_posts() ) : ?>
 
-?>
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'lccc-framework' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header><!-- .page-header -->
+
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', 'search' );
+				?>
+
+			<?php endwhile; ?>
+
+			<?php the_posts_navigation(); ?>
+
+		<?php else : ?>
+
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+		<?php endif; ?>
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
