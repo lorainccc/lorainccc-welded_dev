@@ -174,7 +174,7 @@ function lorainccc_welded_foundation_scripts() {
  
 	/* Add Foundation JS */
 	
-	wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation-643/css/foundation.css' );
+	wp_enqueue_style( 'foundation',  get_template_directory_uri() . '/foundation-643/css/foundation.css' ); /* flexbox */
 
 	wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/foundation-643/js/vendor/foundation.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation-643/js/vendor/what-input.js', array( 'jquery' ), '1', true);

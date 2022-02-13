@@ -143,13 +143,10 @@ body {
     overflow-x: hidden;
 }
 
-.row {
+/*.row {
 	max-width: 960px;
 	margin: 0 auto;
-/* 	font-family: 'open-sans', sans-serif;
-	color: #353535;
-	font-weight: 400; */
-}
+}*/
 
 .site-header {
 	/*margin: 25px 0;*/
