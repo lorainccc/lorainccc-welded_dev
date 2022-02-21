@@ -1,12 +1,13 @@
-.card {
+/* .card {
     // padding-bottom: 6%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    max-width: 400px;
+    // max-width: 400px;
     padding: 2em;
     // border-radius: 20px;
-    justify-content: center;
+    // justify-content: center;
+    height: 100%;
     &__header-image {
         &__image {
         width: 100%
@@ -23,5 +24,33 @@
     }
     &__content {
         // padding: 0 1.5em;
+    }
+}  */  
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10%;
+    height: 100%;
+    &__header-image {
+        &__image {
+        width: 100%
+        }
+    }
+    &__title {
+        margin: 0;
+        font-size: 1.7em !important;
+        width: 100%;
+    }
+    &__content {
+        // padding: 0 1.5em;
+    }
+    &__button {
+        align-self: center;
+        margin-top: auto;
+    }
+    &.card--radius {
+        border-radius: 20px;
     }
 }   

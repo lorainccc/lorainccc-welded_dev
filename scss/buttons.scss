@@ -46,9 +46,10 @@ $button-text: map-get($colors, "dark-grey" );
     font-size: 16px;
     font-weight: 600;
     border-radius: 2.5em;
-    color: $button-text;
-    letter-spacing: .7px;
     transition: scale 0.3s;
+    &:hover {
+        transform: scale(1.03);
+    }
     &--orange {
         @include button-maker("orange");    
     }
@@ -72,12 +73,14 @@ $button-text: map-get($colors, "dark-grey" );
     &--square {
         border-radius: 0;
     }
-    &:visited {
+    a {
         color: $button-text;
-    }
-    &:hover {
-        transform: scale(1.03);
-        color: #FFF;
+        letter-spacing: .7px;
+        &:visited {
+            color: $button-text;
+        }
+        &:hover {
+            color: #FFF;
+        }
     }
 }
-
