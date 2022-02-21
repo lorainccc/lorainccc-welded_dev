@@ -1,0 +1,46 @@
+/****
+***** Variables
+****/
+/***
+**** Colors 
+***/
+SCSS SYNTAX
+
+
+:root {
+    --primary-blue: #29335C;
+    --blue2: #4C5EA8;
+    --blue3: #6E89F5;
+    --steel-blue: #7E87A8;
+    --steel-gray: #585E75;
+    --spark: #F2A71E;
+    --carbon: #F96B11;
+    --borax: #F9D711;
+    --dark-grey: #353535;
+    --mid-grey: #828282;
+    --light-gray: #C2C2C2;
+    --white: #FFF;
+  }
+
+$colors:
+  (
+  "primary-blue": #29335C,
+  "blue2": #4C5EA8,
+  "blue3": #6E89F5,
+  "steel-blue": #7E87A8,
+  "steel-gray": #585E75,
+  "spark": #F2A71E,
+  "carbon": #F96B11,
+  "borax": #F9D711,
+  "dark-grey": #353535,
+  "mid-grey": #828282,
+  "light-gray": #C2C2C2,
+  "white": #FFF,
+  );
+
+/****
+***** Typography
+****/
+
+$lato: "Lato", sans-serif;
+$open-sans: "Open Sans", sans-serif;

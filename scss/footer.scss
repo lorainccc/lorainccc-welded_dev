@@ -1,0 +1,61 @@
+/***
+**** Footer 
+***/
+
+.footer__widgets {
+    padding: 60px 8vw;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footer__widgets {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .footer__widgets .wp-block-column {
+      padding-left: 70px;
+    }
+  }
+  .footer__widgets .wp-block-social-links {
+    justify-content: left;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footer__widgets .wp-block-social-links {
+      justify-content: center;
+    }
+  }
+  .site-footer {
+    color: #FFF;
+    background-color: var(--primary-blue);
+    position: relative;
+    font-size: 1rem;
+  }
+  
+  footer h2 {
+    color: #FFF;
+    font-size: 1rem;
+  }
+  
+  .footer__quick-links {
+    text-decoration: none;
+    margin: 0;
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+  
+  .footer-spark {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 440px;
+    opacity: 0.3;
+  }
+  
+  .footer-spark-left {
+    left: 0;
+  }
+  
+  .footer-spark-right {
+    right: 0;
+  }

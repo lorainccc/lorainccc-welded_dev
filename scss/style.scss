@@ -1,2 +1,33 @@
-@import '../style-backup-20200215';
-@import 'buttons.scss';
+/*!
+ Theme Name: lorainccc-welded_dev
+ Theme URI:    http://www.lorainccc.edu 
+ Description:  Weld-Ed Theme 
+ Author: LCCC Web Development Team 
+ Author URI: http://www.lorainccc.edu 
+ Template: lccc-framework 
+ Version:1.0.0 
+ License: GNU General Public License v2 or later 
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+ Text Domain:  lorainccc-welded
+ /*!
+ /************/
+
+.centered-text {
+    text-align: center;
+}
+
+.--shadow {
+    box-shadow: 0 2px 7px 2px #ccc;
+}
+
+@import 'variables';
+@import 'functions';
+@import 'mixins';
+@import 'global';
+@import 'colors';
+@import 'typography';
+@import 'buttons';
+@import 'cards';
+@import 'header';
+@import 'content';
+@import 'footer';

@@ -1,1 +1,83 @@
-/* test and stuff */
+/***
+**** Buttons 
+***/
+
+/* .button {
+    &.button-welded {
+        padding: 1em 2em;
+        text-transform: uppercase;
+        font-family: $open-sans;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 2.5em;
+        color: map-get($colors, "dark-grey");
+        letter-spacing: .7px;
+    }
+    &.button--orange {
+        @include button-maker("orange");    
+    }
+    &.button-solid--orange {
+        @include button-maker("orange", false);
+        color: #FFF;
+    }
+    &.button--blue {
+        @include button-maker("blue");    
+    }
+    &.button-solid--blue {
+        @include button-maker("blue", false);
+        color: #FFF;
+    }
+    &.button--yellow {
+        @include button-maker("yellow");    
+    }
+    &.button-solid--yellow {
+        @include button-maker("yellow", false);
+    }
+    &.button--square {
+        border-radius: 0;
+    }
+} */
+$button-text: map-get($colors, "dark-grey" );
+
+.button {
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-family: $open-sans;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 2.5em;
+    color: $button-text;
+    letter-spacing: .7px;
+    transition: scale 0.3s;
+    &--orange {
+        @include button-maker("orange");    
+    }
+    &--solid-orange {
+        @include button-maker("orange", false);
+        color: #FFF;
+    }
+    &--blue {
+        @include button-maker("blue");    
+    }
+    &--solid-blue {
+        @include button-maker("blue", false);
+        color: #FFF;
+    }
+    &--yellow {
+        @include button-maker("yellow");    
+    }
+    &--solid-yellow {
+        @include button-maker("yellow", false);
+    }
+    &--square {
+        border-radius: 0;
+    }
+    &:visited {
+        color: $button-text;
+    }
+    &:hover {
+        transform: scale(1.03);
+        color: #FFF;
+    }
+}
+

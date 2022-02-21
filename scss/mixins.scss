@@ -1,0 +1,29 @@
+/****
+***** Mixins
+****/
+@mixin button-maker($color, $gradient:true, $radius:0) {
+    $secondary-color: '';
+
+    @if $color == 'blue' {
+        $color: map-get($colors, "blue2");
+        $secondary-color: map-get($colors , "blue3");
+    } @else if $color == 'orange' {
+        $color: map-get($colors, "carbon" );
+        $secondary-color: map-get($colors , "spark");
+    } @else if $color == 'yellow' {
+        $color: map-get($colors, "spark" );
+        $secondary-color: map-get($colors , "borax");
+    } @else {
+        @error "Invalid color choice. Please enter 'blue,' 'orange,' or 'yellow.'";
+    }
+
+    @if $gradient != false {
+        background-image: linear-gradient($secondary-color 30%, $color);
+    } @else {
+        background-color: $color;
+    }
+
+    @if $radius != 0 {
+        border-radius: #{$radius} + 'px';
+    }
+}

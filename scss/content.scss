@@ -1,0 +1,78 @@
+/***
+**** Content 
+***/
+section {
+  &.padded-half {
+    padding: 2em 0;
+  }
+  &.padded-full {
+    padding: 4em 0;
+  }
+}
+
+h1 {
+    font-family: "Lato", sans-serif;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  h2 {
+    font-family: "Lato", sans-serif;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0 0 9px;
+  }
+
+  h3 {
+    font-family: "Lato", sans-serif;
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-size: 1.3em;
+    margin: 0 0 9px;
+  }
+  
+  header.entry-header {
+    display: flex;
+    justify-content: center;
+    min-height: 400px;
+    align-items: center;
+    position: relative;
+    background-image: url(http://localhost/wp-content/uploads/2022/01/accrediatation-title-banner.jpg);
+    margin-bottom: 7em;
+  }
+  
+  .entry-title {
+    padding: 1.5em 1em;
+    max-width: 800px;
+    color: #fff;
+    background-color: var(--blue2);
+    position: relative;
+    top: 170px;
+    text-align: center;
+  
+  }
+  
+  ul.square-list {
+    list-style: none;
+    /* Remove default bullets */
+    margin-left: 1em;
+  }
+  
+  ul.square-list li::before {
+    content: "■";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--spark);
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */
+  }
