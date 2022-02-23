@@ -10,6 +10,18 @@ section {
   }
 }
 
+.banner-full {
+  min-height: 400px;
+  background-size: cover;
+  display: flex;
+  justify-content: left;
+  padding: 1em 4em;
+}
+
+.banner-full__text {
+    color: #FFF;
+}
+
 h1 {
     font-family: "Lato", sans-serif;
     color: var(--primary-blue);

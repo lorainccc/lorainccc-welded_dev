@@ -12,7 +12,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<div class="row column">
+		<div class="main-content-section">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -23,7 +23,9 @@
 		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php edit_post_link( esc_html__( 'Edit', 'lccc-framework' ), '<span class="edit-link">', '</span>' ); ?>
+ 	<footer class="entry-footer">
+		 <?php 
+		 //edit_post_link( esc_html__( 'Edit', 'lccc-framework' ), '<span class="edit-link">', '</span>' ); 
+		 ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

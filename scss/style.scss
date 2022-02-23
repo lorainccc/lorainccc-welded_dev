@@ -39,3 +39,8 @@
 @import 'header';
 @import 'content';
 @import 'footer';
+
+
+section.become-affiliate {
+    background-image: linear-gradient(var(--steel-blue), var(--primary-blue));
+}

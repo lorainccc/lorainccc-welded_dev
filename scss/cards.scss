@@ -50,7 +50,10 @@
         align-self: center;
         margin-top: auto;
     }
-    &.card--radius {
+    &.card--radius-10, &.card--radius {
+        border-radius: 10px;
+    }
+    &.card--radius-20 {
         border-radius: 20px;
     }
 }   

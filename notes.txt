@@ -1,0 +1,5 @@
+Full Banner
+    the class name is 'banner-full'
+    the background image is set by the Featured Image of the post
+    the overlaid text content is managed in the 'banner-text' custom field, managed on the edit page in wordpress. Use markup in the custom-field value and style with css.
+

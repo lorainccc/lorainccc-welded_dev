@@ -242,7 +242,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 2em;
+  padding: 10%;
   height: 100%;
 }
 .card__header-image__image {
@@ -257,7 +257,10 @@ body {
   align-self: center;
   margin-top: auto;
 }
-.card.card--radius {
+.card.card--radius-10, .card.card--radius {
+  border-radius: 10px;
+}
+.card.card--radius-20 {
   border-radius: 20px;
 }
 
@@ -467,6 +470,18 @@ section.padded-full {
   padding: 4em 0;
 }
 
+.banner-full {
+  min-height: 400px;
+  background-size: cover;
+  display: flex;
+  justify-content: left;
+  padding: 1em 4em;
+}
+
+.banner-full__text {
+  color: #FFF;
+}
+
 h1 {
   font-family: "Lato", sans-serif;
   color: var(--primary-blue);
@@ -592,4 +607,8 @@ footer h2 {
 
 .footer-spark-right {
   right: 0;
+}
+
+section.become-affiliate {
+  background-image: linear-gradient(var(--steel-blue), var(--primary-blue));
 }
