@@ -1,4 +1,6 @@
-Full Banner
+Full Banner (content-banner.php)
+    As of now this element is used on the Home and Workshops Page
+    It is a full width banner with css background image and a text box overlay
     the class name is 'banner-full'
     the background image is set by the Featured Image of the post
     the overlaid text content is managed in the 'banner-text' custom field, managed on the edit page in wordpress. Use markup in the custom-field value and style with css.

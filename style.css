@@ -475,11 +475,48 @@ section.padded-full {
   background-size: cover;
   display: flex;
   justify-content: left;
-  padding: 1em 4em;
+  padding: 25px 6vw;
 }
 
 .banner-full__text {
   color: #FFF;
+  max-width: 500px;
+  margin: 0 auto 0 10vw;
+}
+.banner-full__text span.workshop__title {
+  font-family: "Lato", sans-serif;
+  font-size: 4em;
+  line-height: 1;
+  font-weight: 900;
+}
+.banner-full__text span.workshop__title span {
+  color: var(--spark);
+}
+.banner-full__text span.workshop__description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
+}
+
+.workshop__intro {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+ul.workshop-modules__list {
+  list-style-type: none;
+  margin-left: 0;
+}
+ul.workshop-modules__list .card {
+  padding: 3%;
+  margin-bottom: 2rem;
+}
+
+.module__info {
+  padding: 1em;
+  border: 2px solid var(--spark);
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 
 h1 {
@@ -507,7 +544,7 @@ h3 {
   margin: 0 0 9px;
 }
 
-header.entry-header {
+header.subpage-header {
   display: flex;
   justify-content: center;
   min-height: 400px;
@@ -518,13 +555,21 @@ header.entry-header {
 }
 
 .entry-title {
-  padding: 1.5em 1em;
+  text-align: center;
   max-width: 800px;
+  padding: 1.5em 1em;
+  position: relative;
+  margin: 0 auto;
+}
+
+.subpage-header .entry-title {
   color: #fff;
   background-color: var(--blue2);
-  position: relative;
   top: 170px;
-  text-align: center;
+}
+
+.workshops-header .entry-title {
+  padding: 1.5em 1em 1em;
 }
 
 ul.square-list {
