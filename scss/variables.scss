@@ -1,29 +1,22 @@
-/****
-***** Variables
-****/
-
-$full-width-padding: 25px 6vw;
-
 /***
 **** Colors 
 ***/
-SCSS SYNTAX
 
 
 :root {
-    --primary-blue: #29335C;
-    --blue2: #4C5EA8;
-    --blue3: #6E89F5;
-    --steel-blue: #7E87A8;
-    --steel-gray: #585E75;
-    --spark: #F2A71E;
-    --carbon: #F96B11;
-    --borax: #F9D711;
-    --dark-grey: #353535;
-    --mid-grey: #828282;
-    --light-gray: #C2C2C2;
-    --white: #FFF;
-  }
+  --primary-blue: 41, 51, 92;
+  --blue2: 76, 94, 168;
+  --blue3: 110, 137, 245;
+  --steel-blue: 126, 135, 168;
+  --steel-gray: 88, 94, 117;
+  --spark: 242, 167, 30;
+  --carbon: 249, 107, 17;
+  --borax: 249, 215, 17;
+  --dark-grey: 53, 53, 53;
+  --mid-grey: 130, 130, 130;
+  --light-gray: 194, 194, 194;
+  --white: 255, 255, 255;
+}
 
 $colors:
   (
@@ -39,7 +32,7 @@ $colors:
   "mid-grey": #828282,
   "light-gray": #C2C2C2,
   "white": #FFF,
-  );
+);
 
 /****
 ***** Typography
@@ -47,3 +40,8 @@ $colors:
 
 $lato: "Lato", sans-serif;
 $open-sans: "Open Sans", sans-serif;
+
+/*****
+****** Layout
+*****/
+$full-width-padding: 25px 6vw;

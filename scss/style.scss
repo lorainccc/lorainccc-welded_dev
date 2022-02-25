@@ -12,6 +12,8 @@
  /*!
  /************/
 
+ @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 .centered-text {
     text-align: center;
 }
@@ -32,8 +34,6 @@
 @import 'functions';
 @import 'mixins';
 @import 'global';
-@import 'colors';
-@import 'typography';
 @import 'buttons';
 @import 'cards';
 @import 'header';
@@ -42,5 +42,5 @@
 
 
 section.become-affiliate {
-    background-image: linear-gradient(var(--steel-blue), var(--primary-blue));
+    background-image: linear-gradient(rgb(var(--steel-blue)), rgb(var(--primary-blue)));
 }

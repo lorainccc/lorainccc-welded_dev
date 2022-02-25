@@ -39,7 +39,7 @@ a:active {
 
   body {
     font-family: "open-sans", sans-serif;
-    color: var(--dark-grey);
+    color: map-get($colors , "dark-grey");
     font-weight: 400;
     font-size: 18px;
     overflow-x: hidden;

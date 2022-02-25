@@ -28,7 +28,7 @@ section {
     line-height: 1;
     font-weight: 900;
     & span {
-      color: var(--spark);
+      color: rgb(var(--spark));
     }
   }
   span.workshop__description {
@@ -54,14 +54,14 @@ ul.workshop-modules__list {
 
 .module__info {
   padding: 1em;
-  border: 2px solid var(--spark);
+  border: 2px solid rgb(var(--spark));
   margin-bottom: 30px;
   border-radius: 10px;
 }
 
 h1 {
     font-family: "Lato", sans-serif;
-    color: var(--primary-blue);
+    color: map-get($colors, "primary-blue");
     font-weight: 700;
     font-size: 2.5em;
     text-transform: uppercase;
@@ -70,7 +70,7 @@ h1 {
   
   h2 {
     font-family: "Lato", sans-serif;
-    color: var(--primary-blue);
+    color: map-get($colors, "primary-blue");
     font-weight: 700;
     font-size: 2em;
     margin: 0 0 9px;
@@ -78,7 +78,7 @@ h1 {
 
   h3 {
     font-family: "Lato", sans-serif;
-    color: var(--primary-blue);
+    color: map-get($colors, "primary-blue");
     font-weight: 500;
     font-size: 1.3em;
     margin: 0 0 9px;
@@ -104,7 +104,7 @@ h1 {
   
   .subpage-header .entry-title {
     color: #fff;
-    background-color: var(--blue2);
+    background-color: map-get($colors, "blue2");
     top: 170px;  
   }
 
@@ -121,7 +121,7 @@ h1 {
   ul.square-list li::before {
     content: "■";
     /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: var(--spark);
+    color: map-get($colors, "spark");
     /* Change the color */
     font-weight: bold;
     /* If you want it to be bold */

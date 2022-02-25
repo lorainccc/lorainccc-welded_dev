@@ -31,36 +31,30 @@
   }
 }
 
-/****
-***** Variables
-****/
 /***
 **** Colors 
 ***/
-SCSS SYNTAX :root {
-  --primary-blue: #29335C;
-  --blue2: #4C5EA8;
-  --blue3: #6E89F5;
-  --steel-blue: #7E87A8;
-  --steel-gray: #585E75;
-  --spark: #F2A71E;
-  --carbon: #F96B11;
-  --borax: #F9D711;
-  --dark-grey: #353535;
-  --mid-grey: #828282;
-  --light-gray: #C2C2C2;
-  --white: #FFF;
+:root {
+  --primary-blue: 41, 51, 92;
+  --blue2: 76, 94, 168;
+  --blue3: 110, 137, 245;
+  --steel-blue: 126, 135, 168;
+  --steel-gray: 88, 94, 117;
+  --spark: 242, 167, 30;
+  --carbon: 249, 107, 17;
+  --borax: 249, 215, 17;
+  --dark-grey: 53, 53, 53;
+  --mid-grey: 130, 130, 130;
+  --light-gray: 194, 194, 194;
+  --white: 255, 255, 255;
 }
 
 /****
 ***** Typography
 ****/
-/***
-**** Functions 
-***/
-/****
-***** Mixins
-****/
+/*****
+****** Layout
+*****/
 /***
 **** GLOBAL ****
 ***/
@@ -99,33 +93,12 @@ a:active {
 /******************* END _s LINKS *******************/
 body {
   font-family: "open-sans", sans-serif;
-  color: var(--dark-grey);
+  color: #353535;
   font-weight: 400;
   font-size: 18px;
   overflow-x: hidden;
 }
 
-/***
-**** Colors 
-***/
-:root {
-  --primary-blue: #29335C;
-  --blue2: #4C5EA8;
-  --blue3: #6E89F5;
-  --steel-blue: #7E87A8;
-  --steel-gray: #585E75;
-  --spark: #F2A71E;
-  --carbon: #F96B11;
-  --borax: #F9D711;
-  --dark-grey: #353535;
-  --mid-grey: #828282;
-  --light-gray: #C2C2C2;
-  --white: #FFF;
-}
-
-/****
-***** Typosgraphy
-****/
 /***
 **** Buttons 
 ***/
@@ -176,6 +149,9 @@ body {
 .button:hover {
   transform: scale(1.03);
 }
+.button:visited {
+  color: #353535;
+}
 .button--orange {
   background-image: linear-gradient(#F2A71E 30%, #F96B11);
 }
@@ -210,34 +186,6 @@ body {
   color: #FFF;
 }
 
-/* .card {
-    // padding-bottom: 6%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    // max-width: 400px;
-    padding: 2em;
-    // border-radius: 20px;
-    // justify-content: center;
-    height: 100%;
-    &__header-image {
-        &__image {
-        width: 100%
-        }
-    }
-    &__title {
-        // padding: 10px;
-        margin: 0;
-        font-size: 1.7em !important;
-        //white-space: nowrap;
-        //text-overflow: ellipsis;
-        // overflow: hidden;
-        width: 100%;
-    }
-    &__content {
-        // padding: 0 1.5em;
-    }
-}  */
 .card {
   display: flex;
   flex-direction: column;
@@ -264,6 +212,52 @@ body {
   border-radius: 20px;
 }
 
+.card-full-feature {
+  background-image: url(http://localhost/wp-content/uploads/2022/02/industrial-affiliate-header-image.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.card-full-feature__content {
+  background-color: rgba(var(--steel-gray), 0.7);
+  padding: 2em;
+}
+.card-full-feature__title {
+  color: rgb(var(--white));
+}
+.card-full-feature__text {
+  color: rgb(var(--white));
+}
+
+.card-solid-bg {
+  position: relative;
+  padding: 6%;
+}
+.card-solid-bg::after {
+  content: url(http://localhost/wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  opacity: 0.1;
+  width: 80%;
+  max-width: 700px;
+}
+.card-solid-bg__title {
+  color: rgb(var(--white));
+}
+.card-solid-bg__text {
+  color: rgb(var(--white));
+}
+.card-solid-bg__button {
+  align-self: end;
+}
+.card-solid-bg--dark-blue {
+  background-color: rgb(var(--blue2));
+}
+.card-solid-bg--light-blue {
+  background-color: rgb(var(--blue3));
+}
+
 /**** 
 ***** Header
 ****/
@@ -272,7 +266,7 @@ body {
   position: absolute;
   list-style-type: none;
   padding: 0px;
-  background: #145b5b;
+  background: #29335C;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -344,7 +338,7 @@ body {
 }
 
 #primary-menu > li > a:hover {
-  color: var(--blue2);
+  color: #4C5EA8;
   /*transform: scale(1.02);*/
   border: 2px solid var(--primary-blue);
 }
@@ -359,19 +353,19 @@ body {
 }
 
 ul.sub-menu > li {
-  background-color: var(--primary-blue);
-  border-bottom: 2px solid var(--steel-blue);
+  background-color: rgb(var(--primary-blue));
+  border-bottom: 2px solid rgb(var(--steel-blue));
   transition: all 0.3s;
 }
 
 ul.sub-menu > li:hover {
-  background-color: var(--blue2);
+  background-color: rgb(var(--blue2));
 }
 
 ul.sub-menu > li > a:before {
   content: "";
   position: absolute;
-  background: var(--spark);
+  background: rgb(var(--spark));
   width: 0px;
   height: 100%;
   top: 0px;
@@ -437,7 +431,7 @@ ul.sub-menu > li > a {
 }
 
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
-  border: 3px solid var(--spark);
+  border: 3px solid rgb(var(--spark));
   border-radius: 25px;
   padding: 0;
 }
@@ -450,8 +444,8 @@ ul.sub-menu > li > a {
 
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__button {
   border-radius: 0 25px 25px 0;
-  border: 1px solid var(--spark);
-  background-color: var(--spark);
+  border: 1px solid rgb(var(--spark));
+  background-color: #F2A71E;
   margin: 0;
   padding: 4px;
 }
@@ -490,7 +484,7 @@ section.padded-full {
   font-weight: 900;
 }
 .banner-full__text span.workshop__title span {
-  color: var(--spark);
+  color: rgb(var(--spark));
 }
 .banner-full__text span.workshop__description {
   font-family: "Open Sans", sans-serif;
@@ -514,14 +508,14 @@ ul.workshop-modules__list .card {
 
 .module__info {
   padding: 1em;
-  border: 2px solid var(--spark);
+  border: 2px solid rgb(var(--spark));
   margin-bottom: 30px;
   border-radius: 10px;
 }
 
 h1 {
   font-family: "Lato", sans-serif;
-  color: var(--primary-blue);
+  color: #29335C;
   font-weight: 700;
   font-size: 2.5em;
   text-transform: uppercase;
@@ -530,7 +524,7 @@ h1 {
 
 h2 {
   font-family: "Lato", sans-serif;
-  color: var(--primary-blue);
+  color: #29335C;
   font-weight: 700;
   font-size: 2em;
   margin: 0 0 9px;
@@ -538,7 +532,7 @@ h2 {
 
 h3 {
   font-family: "Lato", sans-serif;
-  color: var(--primary-blue);
+  color: #29335C;
   font-weight: 500;
   font-size: 1.3em;
   margin: 0 0 9px;
@@ -564,7 +558,7 @@ header.subpage-header {
 
 .subpage-header .entry-title {
   color: #fff;
-  background-color: var(--blue2);
+  background-color: #4C5EA8;
   top: 170px;
 }
 
@@ -581,7 +575,7 @@ ul.square-list {
 ul.square-list li::before {
   content: "■";
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: var(--spark);
+  color: #F2A71E;
   /* Change the color */
   font-weight: bold;
   /* If you want it to be bold */
@@ -621,7 +615,7 @@ ul.square-list li::before {
 }
 .site-footer {
   color: #FFF;
-  background-color: var(--primary-blue);
+  background-color: rgb(var(--primary-blue));
   position: relative;
   font-size: 1rem;
 }
@@ -655,5 +649,5 @@ footer h2 {
 }
 
 section.become-affiliate {
-  background-image: linear-gradient(var(--steel-blue), var(--primary-blue));
+  background-image: linear-gradient(rgb(var(--steel-blue)), rgb(var(--primary-blue)));
 }

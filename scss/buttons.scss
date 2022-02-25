@@ -50,6 +50,9 @@ $button-text: map-get($colors, "dark-grey" );
     &:hover {
         transform: scale(1.03);
     }
+    &:visited {
+        color: $button-text;
+    }
     &--orange {
         @include button-maker("orange");    
     }
