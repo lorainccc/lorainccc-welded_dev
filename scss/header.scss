@@ -13,7 +13,7 @@
     transition: all 0.3s ease-in-out;
     width: 350px;
     z-index: 999;
-    top: 48px;
+    top: 45px;
   }
   
   .main-navigation ul ul li:hover > ul,
@@ -86,7 +86,7 @@
   #primary-menu > li > a:hover {
     color: map-get($colors, "blue2");
     /*transform: scale(1.02);*/
-    border: 2px solid var(--primary-blue);
+    border: 2px solid rgb(var(--primary-blue));
   }
   
   .wp-block-social-links {

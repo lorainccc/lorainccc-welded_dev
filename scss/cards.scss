@@ -1,4 +1,5 @@
 .card {
+    background-color: #FFF;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -31,7 +32,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    // padding: 3em;
+    padding: 8%;
     &__content {
         background-color: rgba(var(--steel-gray), 0.7);
         padding: 2em;
@@ -73,5 +74,44 @@
     }
     &--light-blue {
         background-color: rgb(var(--blue3));
+    }
+}
+
+.article-post-wrapper {
+    @include flex-row();
+}
+
+.card-article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    @media only screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+    background-color: #FFF;
+    padding: 30px;
+    height: 100%;
+    &__image {
+        margin: 10px 16px 10px 0;
+        @media only screen and (min-width: 768px) {
+            width: 45%;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: 768px) {
+            width: 55%;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    &__text {
+        line-height: 1.3;
+    }
+    &__link {
+        font-weight: bold;
     }
 }

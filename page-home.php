@@ -16,7 +16,7 @@ get_header();
 	</header><!-- .entry-header -->
 
     <div class="entry-content">
-		<div class="main-content-section">
+		<div class="main-content-section main-content-section--home">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(

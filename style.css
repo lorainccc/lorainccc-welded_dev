@@ -61,6 +61,7 @@
 /*********** RESTORE _s LINK STYLES ****************/
 a {
   color: #4169e1;
+  text-decoration: underline;
 }
 
 a:visited {
@@ -187,6 +188,7 @@ body {
 }
 
 .card {
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -217,6 +219,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  padding: 8%;
 }
 .card-full-feature__content {
   background-color: rgba(var(--steel-gray), 0.7);
@@ -258,6 +261,54 @@ body {
   background-color: rgb(var(--blue3));
 }
 
+.article-post-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  padding: 30px;
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .card-article {
+    flex-direction: row;
+  }
+}
+.card-article__image {
+  margin: 10px 16px 10px 0;
+}
+@media only screen and (min-width: 768px) {
+  .card-article__image {
+    width: 45%;
+  }
+}
+.card-article__content {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .card-article__content {
+    width: 55%;
+  }
+}
+.card-article__title {
+  font-weight: 600;
+  line-height: 1.2;
+}
+.card-article__text {
+  line-height: 1.3;
+}
+.card-article__link {
+  font-weight: bold;
+}
+
 /**** 
 ***** Header
 ****/
@@ -272,7 +323,7 @@ body {
   transition: all 0.3s ease-in-out;
   width: 350px;
   z-index: 999;
-  top: 48px;
+  top: 45px;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -340,7 +391,7 @@ body {
 #primary-menu > li > a:hover {
   color: #4C5EA8;
   /*transform: scale(1.02);*/
-  border: 2px solid var(--primary-blue);
+  border: 2px solid rgb(var(--primary-blue));
 }
 
 .wp-block-social-links {
@@ -469,26 +520,92 @@ section.padded-full {
   background-size: cover;
   display: flex;
   justify-content: left;
-  padding: 25px 6vw;
+  padding: 60px 3vw;
+}
+.banner-full__text {
+  color: #FFF;
+  max-width: 700px;
+  margin: 0 auto 0 5vw;
+}
+.banner-full__title {
+  color: #FFF;
+  font-family: "Lato", sans-serif;
+  font-size: 3em;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: none;
+}
+.banner-full__title span {
+  color: rgb(var(--spark));
+}
+.banner-full__description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
 }
 
-.banner-full__text {
+.workshops-header .banner-full {
+  background-color: #000;
+}
+.workshops-header .banner-full__text {
   color: #FFF;
   max-width: 500px;
   margin: 0 auto 0 10vw;
 }
-.banner-full__text span.workshop__title {
+.workshops-header .banner-full__text span.workshop__title {
   font-family: "Lato", sans-serif;
   font-size: 4em;
   line-height: 1;
   font-weight: 900;
 }
-.banner-full__text span.workshop__title span {
+.workshops-header .banner-full__text span.workshop__title span {
   color: rgb(var(--spark));
 }
-.banner-full__text span.workshop__description {
+.workshops-header .banner-full__text span.workshop__description {
   font-family: "Open Sans", sans-serif;
   font-size: 1.3em;
+}
+
+.workshop-announcement {
+  font-family: "Lato", sans-serif;
+  color: #29335C;
+  font-weight: 700;
+  font-size: 2em;
+  margin: 40px auto;
+  font-style: italic;
+  text-align: center;
+}
+
+.main-content-section {
+  padding-bottom: 100px;
+}
+.main-content-section--home {
+  padding-bottom: 0;
+}
+
+section.featured-items {
+  background-image: url();
+}
+section.featured-items p {
+  line-height: 1.3;
+}
+
+.card.instructor-training {
+  background-image: url(http://localhost/wp-content/uploads/2022/02/weld-ed-home-feature-background-2.jpg);
+  grid-area: large-feature-1;
+}
+
+.card.technical-research {
+  background-image: url(http://localhost/wp-content/uploads/2022/02/weld-ed-home-feature-background-3.jpg);
+  grid-area: large-feature-2;
+  justify-content: end;
+}
+
+.card.accreditation {
+  grid-area: small-feature-1;
+}
+
+.card.affiliate {
+  grid-area: small-feature-2;
 }
 
 .workshop__intro {
@@ -548,6 +665,13 @@ header.subpage-header {
   margin-bottom: 7em;
 }
 
+.post-155 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/02/fabtech-title-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 .entry-title {
   text-align: center;
   max-width: 800px;
@@ -564,6 +688,40 @@ header.subpage-header {
 
 .workshops-header .entry-title {
   padding: 1.5em 1em 1em;
+}
+
+section.featured-items .row {
+  width: 100%;
+  max-width: 1450px;
+  padding: 60px 3vw;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 75em) {
+  section.featured-items .row {
+    display: grid;
+    grid-template-columns: [col] 40% [col] 16% [col] 40%;
+    grid-template-rows: [row] auto [row] 300px [row] 300px [row] auto;
+    grid-gap: 2%;
+    grid-template-areas: "large-feature-1 large-feature-1 ." "large-feature-1 large-feature-1 small-feature-1" "small-feature-2 large-feature-2 large-feature-2" ". large-feature-2 large-feature-2";
+  }
+}
+
+section.featured-video .row.video-wrapper {
+  padding: 3vw;
+  background-image: url(http://localhost/wp-content/uploads/2022/02/featured-video-background-scaled.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.news-articles {
+  padding: 60px 3vw;
+  /*     background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(http://localhost/wp-content/uploads/2022/02/news-section-image-background-scaled.jpg); */
+  background: #000 center top/cover url(http://localhost/wp-content/uploads/2022/02/news-section-image-background-scaled.jpg) no-repeat;
 }
 
 ul.square-list {

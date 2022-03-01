@@ -5,3 +5,28 @@ Full Banner (content-banner.php)
     the background image is set by the Featured Image of the post
     the overlaid text content is managed in the 'banner-text' custom field, managed on the edit page in wordpress. Use markup in the custom-field value and style with css.
 
+Mobile menu
+    LCCC code in /js/funcitons.js
+    Ask Joe to help implement or if there is documentation I can follow.
+
+Accessibility
+-------------
+Audit #1 - 02-27-2022
+Search icon in header__widgts area:
+needs role=button and aria-label="search"
+Widget is created in Wordpress editor. Don't see a way to add tags.
+Is there a way to do it in the register?
+
+Redundant alt tags on Logo
+
+Punch list
+-------------
+1. Uniform button text color, text hover, text visited
+2. Switch out page banners
+3. Mobile menu
+4. And leftover responsive issues after mobile menu is in place
+5. Images for underrepresented, workshops and fabtech
+
+
+
+

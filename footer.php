@@ -32,7 +32,7 @@
 				?>
 		</div>--><!-- .site-info -->
 		<img class="footer-spark footer-spark-left" alt="" src="http://davidb551.sg-host.com/wp-content/uploads/2022/01/corner-spark-bottom-left.svg" />
-		<img class="footer-spark footer-spark-right" alr="" src="http://davidb551.sg-host.com/wp-content/uploads/2022/01/corner-spark-bottom-right.svg" />
+		<img class="footer-spark footer-spark-right" alt="" src="http://davidb551.sg-host.com/wp-content/uploads/2022/01/corner-spark-bottom-right.svg" />
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
