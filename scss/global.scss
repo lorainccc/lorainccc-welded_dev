@@ -5,18 +5,18 @@
 /*********** RESTORE _s LINK STYLES ****************/
 
  a {
-	color: #4169e1;
+	color: rgb(var(--primary-blue));
 	text-decoration: underline;
 }
 
 a:visited {
-	color: #800080;
+	color: #353535;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #4169e1;
 }
 
 a:focus {
@@ -44,4 +44,8 @@ a:active {
     font-weight: 400;
     font-size: 18px;
     overflow-x: hidden;
+  }
+
+  #page {
+	  overflow-x: hidden;
   }

@@ -4,6 +4,13 @@
 
 .footer__widgets {
     padding: 60px 8vw;
+    a {
+      color: #FFF;
+      &:hover {
+        color: #2199e8;
+        text-decoration: none;
+      }
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -14,6 +21,7 @@
   @media screen and (min-width: 768px) {
     .footer__widgets .wp-block-column {
       padding-left: 70px;
+      z-index: 100;
     }
   }
   .footer__widgets .wp-block-social-links {
@@ -42,6 +50,13 @@
     margin: 0;
     list-style-type: none;
     padding-inline-start: 0;
+    a {
+      color: #FFF;
+      &:hover {
+        color: #2199e8;
+        text-decoration: none;
+      }
+    }
   }
   
   .footer-spark {

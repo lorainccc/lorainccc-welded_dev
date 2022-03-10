@@ -60,18 +60,18 @@
 ***/
 /*********** RESTORE _s LINK STYLES ****************/
 a {
-  color: #4169e1;
+  color: rgb(var(--primary-blue));
   text-decoration: underline;
 }
 
 a:visited {
-  color: #800080;
+  color: #353535;
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: #191970;
+  color: #4169e1;
 }
 
 a:focus {
@@ -100,55 +100,28 @@ body {
   overflow-x: hidden;
 }
 
+#page {
+  overflow-x: hidden;
+}
+
 /***
 **** Buttons 
 ***/
-/* .button {
-    &.button-welded {
-        padding: 1em 2em;
-        text-transform: uppercase;
-        font-family: $open-sans;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 2.5em;
-        color: map-get($colors, "dark-grey");
-        letter-spacing: .7px;
-    }
-    &.button--orange {
-        @include button-maker("orange");    
-    }
-    &.button-solid--orange {
-        @include button-maker("orange", false);
-        color: #FFF;
-    }
-    &.button--blue {
-        @include button-maker("blue");    
-    }
-    &.button-solid--blue {
-        @include button-maker("blue", false);
-        color: #FFF;
-    }
-    &.button--yellow {
-        @include button-maker("yellow");    
-    }
-    &.button-solid--yellow {
-        @include button-maker("yellow", false);
-    }
-    &.button--square {
-        border-radius: 0;
-    }
-} */
 .button {
+  display: inline-block;
   padding: 1em 2em;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   border-radius: 2.5em;
-  transition: scale 0.3s;
+  transition: all 0.3s;
+  color: #353535;
+  letter-spacing: 0.7px;
 }
 .button:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  color: #FFF !important;
 }
 .button:visited {
   color: #353535;
@@ -158,14 +131,14 @@ body {
 }
 .button--solid-orange {
   background-color: #F96B11;
-  color: #FFF;
 }
 .button--blue {
   background-image: linear-gradient(#6E89F5 30%, #4C5EA8);
+  color: #FFF !important;
 }
 .button--solid-blue {
   background-color: #4C5EA8;
-  color: #FFF;
+  color: #FFF !important;
 }
 .button--yellow {
   background-image: linear-gradient(#F9D711 30%, #F2A71E);
@@ -176,30 +149,29 @@ body {
 .button--square {
   border-radius: 0;
 }
-.button a {
-  color: #353535;
-  letter-spacing: 0.7px;
-}
-.button a:visited {
-  color: #353535;
-}
-.button a:hover {
+
+a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   color: #FFF;
 }
 
 .card {
+  border: none;
   background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 10%;
   height: 100%;
 }
 .card__header-image__image {
   width: 100%;
 }
+.card__content {
+  padding: 6%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .card__title {
-  margin: 0;
   font-size: 1.7em !important;
   width: 100%;
 }
@@ -221,6 +193,11 @@ body {
   background-repeat: no-repeat;
   padding: 8%;
 }
+@media only screen and (max-width: 75em) {
+  .card-full-feature {
+    padding: 0;
+  }
+}
 .card-full-feature__content {
   background-color: rgba(var(--steel-gray), 0.7);
   padding: 2em;
@@ -234,7 +211,6 @@ body {
 
 .card-solid-bg {
   position: relative;
-  padding: 6%;
 }
 .card-solid-bg::after {
   content: url(http://localhost/wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
@@ -244,6 +220,9 @@ body {
   opacity: 0.1;
   width: 80%;
   max-width: 700px;
+}
+.card-solid-bg__content {
+  padding: 6%;
 }
 .card-solid-bg__title {
   color: rgb(var(--white));
@@ -269,6 +248,7 @@ body {
 }
 
 .card-article {
+  border: none;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -304,6 +284,7 @@ body {
 }
 .card-article__text {
   line-height: 1.3;
+  font-size: 0.9em;
 }
 .card-article__link {
   font-weight: bold;
@@ -527,6 +508,11 @@ section.padded-full {
   max-width: 700px;
   margin: 0 auto 0 5vw;
 }
+@media only screen and (max-width: 768px) {
+  .banner-full__text {
+    font-size: 0.9em;
+  }
+}
 .banner-full__title {
   color: #FFF;
   font-family: "Lato", sans-serif;
@@ -534,6 +520,11 @@ section.padded-full {
   line-height: 1;
   font-weight: 900;
   text-transform: none;
+}
+@media only screen and (max-width: 768px) {
+  .banner-full__title {
+    font-size: calc(2em + 2vw);
+  }
 }
 .banner-full__title span {
   color: rgb(var(--spark));
@@ -557,12 +548,22 @@ section.padded-full {
   line-height: 1;
   font-weight: 900;
 }
+@media only screen and (max-width: 768px) {
+  .workshops-header .banner-full__text span.workshop__title {
+    font-size: calc(2.2em + 3vw);
+  }
+}
 .workshops-header .banner-full__text span.workshop__title span {
   color: rgb(var(--spark));
 }
 .workshops-header .banner-full__text span.workshop__description {
   font-family: "Open Sans", sans-serif;
   font-size: 1.3em;
+}
+@media only screen and (max-width: 768px) {
+  .workshops-header .banner-full__text span.workshop__description {
+    font-size: 1em;
+  }
 }
 
 .workshop-announcement {
@@ -638,6 +639,11 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2em;
+  }
+}
 
 h2 {
   font-family: "Lato", sans-serif;
@@ -645,6 +651,11 @@ h2 {
   font-weight: 700;
   font-size: 2em;
   margin: 0 0 9px;
+}
+@media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.8em;
+  }
 }
 
 h3 {
@@ -684,6 +695,7 @@ header.subpage-header {
   color: #fff;
   background-color: #4C5EA8;
   top: 170px;
+  margin: 0 10px;
 }
 
 .workshops-header .entry-title {
@@ -751,6 +763,13 @@ ul.square-list li::before {
 .footer__widgets {
   padding: 60px 8vw;
 }
+.footer__widgets a {
+  color: #FFF;
+}
+.footer__widgets a:hover {
+  color: #2199e8;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 600px) {
   .footer__widgets {
@@ -760,6 +779,7 @@ ul.square-list li::before {
 @media screen and (min-width: 768px) {
   .footer__widgets .wp-block-column {
     padding-left: 70px;
+    z-index: 100;
   }
 }
 .footer__widgets .wp-block-social-links {
@@ -789,6 +809,13 @@ footer h2 {
   list-style-type: none;
   padding-inline-start: 0;
 }
+.footer__quick-links a {
+  color: #FFF;
+}
+.footer__quick-links a:hover {
+  color: #2199e8;
+  text-decoration: none;
+}
 
 .footer-spark {
   display: block;
@@ -807,5 +834,5 @@ footer h2 {
 }
 
 section.become-affiliate {
-  background-image: linear-gradient(rgb(var(--steel-blue)), rgb(var(--primary-blue)));
+  background-image: linear-gradient(135deg, rgba(var(--blue3), 1) 30%, rgba(var(--carbon), 0.7) 50%, rgba(var(--spark), 0.7) 79%, rgba(var(--spark), 1));
 }

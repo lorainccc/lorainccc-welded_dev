@@ -10,8 +10,6 @@ section {
   }
 }
 
-
-
 .banner-full {
   min-height: 400px;
   background-size: cover;
@@ -22,6 +20,9 @@ section {
     color: #FFF;
     max-width: 700px;
     margin: 0 auto 0 5vw;
+    @media only screen and (max-width: 768px) {
+      font-size: .9em;
+    }
   }
   &__title {
     color: #FFF;
@@ -30,6 +31,9 @@ section {
     line-height: 1;
     font-weight: 900;
     text-transform: none;
+    @media only screen and (max-width: 768px) {
+      font-size: calc(2em + 2vw)
+    }
     & span {
       color: rgb(var(--spark));
     }
@@ -52,6 +56,9 @@ section {
         font-size: 4em;
         line-height: 1;
         font-weight: 900;
+        @media only screen and (max-width: 768px) {
+          font-size: calc(2.2em + 3vw);
+        }
         & span {
           color: rgb(var(--spark));
         }
@@ -59,6 +66,9 @@ section {
       span.workshop__description {
         font-family: $open-sans;
         font-size: 1.3em;
+        @media only screen and (max-width: 768px) {
+          font-size: 1em;
+        }
       }
     }
   }
@@ -136,6 +146,9 @@ h1 {
     font-size: 2.5em;
     text-transform: uppercase;
     letter-spacing: 3px;
+    @media #{$target-tablet-under} {
+      font-size: 2em;
+    }
   }
   
   h2 {
@@ -144,6 +157,9 @@ h1 {
     font-weight: 700;
     font-size: 2em;
     margin: 0 0 9px;
+    @media #{$target-tablet-under} {
+      font-size: 1.8em;
+    }
   }
 
   h3 {
@@ -181,6 +197,7 @@ h1 {
     color: #fff;
     background-color: map-get($colors, "blue2");
     top: 170px;  
+    margin: 0 10px;
   }
 
   .workshops-header .entry-title {

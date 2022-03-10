@@ -45,3 +45,55 @@ $open-sans: "Open Sans", sans-serif;
 ****** Layout
 *****/
 $full-width-padding: 60px 3vw;
+
+//
+// section padding
+//
+$padded-extreme: 6em 0.9em;
+$padded-extreme-even: 6em 0.9em;
+$padded-full: 4em 0.9em 2em;
+$padded-full-even: 4em 0.9em;
+$padded-half: 2em 0.9em 1em;
+$padded-half-even: 2em 0.9em;
+
+
+//
+// breakpoints
+//
+$break-phone: 480px;
+$break-large-phone: 640px;
+$break-tablet-under: 767px;
+$break-tablet: 768px;
+$break-tablet-over: 769px;
+$break-laptop-under: 1023px;
+$break-laptop: 1024px;
+$break-laptop-over: 1025px;
+$break-desktop: 1500px;
+$break-large-screen: 2400px;
+
+//
+// aspect ratios
+//
+$aspect-2-1: calc(100vw * (1 / 2));
+$aspect-3-2: calc(100vw * (2 / 3));
+$aspect-4-3: calc(100vw * (3 / 4));
+$aspect-16-9: calc(100vw * (9 / 16));
+$aspect-21-9: calc(100vw * (9 / 21));
+$aspect-4-1: calc(100vw * (1 / 4));
+
+//
+// media queries
+//
+$target-phone: "only screen and (max-width: " + $break-phone + ")";
+$target-large-phone: "only screen and (max-width: " + $break-large-phone + ")";
+$target-tablet-under: "only screen and (max-width: " + $break-tablet-under + ")";
+$target-tablet: "only screen and (max-width: " + $break-tablet + ")";
+$target-phone-tablet-range: "only screen and (min-width: " + $break-large-phone + ") and ( max-width: " $break-laptop-under + ")";
+$target-tablet-range: "only screen and (min-width: " + $break-tablet + ") and (max-width: " + $break-laptop-under + ")";
+$target-tablet-over: "only screen and (min-width: " + $break-tablet + ")";
+$target-laptop-under: "only screen and (max-width: " + $break-laptop-under + ")";
+$target-laptop: "only screen and (max-width: " + $break-laptop + ")";
+$target-laptop-over: "only screen and (min-width: " + $break-laptop-over + ")";
+$target-break-desktop: "only screen and (min-width: " + $break-desktop + ")";
+$target-desktop-under: "only screen and (max-width: " + $break-desktop + ")";
+$target-large-screen: "only screen and (min-width: " + $break-large-screen + ")";
