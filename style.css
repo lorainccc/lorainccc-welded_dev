@@ -96,7 +96,7 @@ body {
   font-family: "open-sans", sans-serif;
   color: #353535;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   overflow-x: hidden;
 }
 
@@ -293,33 +293,6 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
 /**** 
 ***** Header
 ****/
-/********** nacep.com nav copy *********************/
-.main-navigation ul ul {
-  position: absolute;
-  list-style-type: none;
-  padding: 0px;
-  background: #29335C;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  width: 350px;
-  z-index: 999;
-  top: 45px;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  opacity: 1;
-  visibility: visible;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  opacity: 1;
-  visibility: visible;
-}
-
-/********************* end nacep ************************/
 /********************** original _s **********************/
 .main-navigation li {
   position: relative;
@@ -360,6 +333,7 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   transition: color 0.5s;
   letter-spacing: 2px;
   padding: 10px 18px;
+  padding-right: 27px;
   display: inline-block;
   -webkit-font-smoothing: auto;
 }
@@ -371,8 +345,7 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
 
 #primary-menu > li > a:hover {
   color: #4C5EA8;
-  /*transform: scale(1.02);*/
-  border: 2px solid rgb(var(--primary-blue));
+  border: 2px solid rgb(var(--blue2));
 }
 
 .wp-block-social-links {
@@ -391,7 +364,7 @@ ul.sub-menu > li {
 }
 
 ul.sub-menu > li:hover {
-  background-color: rgb(var(--blue2));
+  background-color: rgb(var(--blue2)) !important;
 }
 
 ul.sub-menu > li > a:before {
@@ -458,7 +431,6 @@ ul.sub-menu > li > a {
 
 .nav-search {
   margin-bottom: 10px;
-  /* max-width: 300px; */
   width: 100%;
 }
 
@@ -486,6 +458,59 @@ ul.sub-menu > li > a {
   fill: #FFF;
 }
 
+/********** nacep.org nav copy *********************/
+.main-navigation ul ul {
+  position: absolute;
+  list-style-type: none;
+  padding: 0px;
+  background: #29335C;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  width: 350px;
+  z-index: 999;
+  top: 45px;
+  margin-left: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+ul#primary-menu li.menu-item-has-children {
+  position: relative;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+ul#primary-menu li.menu-item-has-children > a::before {
+  content: ">";
+  position: absolute;
+  font-size: 20px;
+  font-family: monospace;
+  line-height: 1;
+  right: 7px;
+  top: 10px;
+  transform: rotate(0deg);
+  transition: all 0.3s;
+}
+
+ul#primary-menu li.menu-item-has-children > a:hover::before {
+  transform: rotate(90deg);
+  color: rgb(var(--blue2));
+  top: 12px;
+}
+
+/********************* end nacep ************************/
 /***
 **** Content 
 ***/
@@ -672,15 +697,101 @@ header.subpage-header {
   min-height: 400px;
   align-items: center;
   position: relative;
-  background-image: url(http://localhost/wp-content/uploads/2022/01/accrediatation-title-banner.jpg);
+  /** default banner image **/
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
   margin-bottom: 7em;
 }
 
+/** Mission & Focus Banner **/
+.post-2 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-multiple-welders-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/** About Banner **/
+.post-53 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-auto-weld-1-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media only screen and (min-width: 768px) {
+  .post-53 .subpage-header {
+    min-height: 800px;
+  }
+}
+
+.post-55 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-auto-weld-1-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Industry Partners Banner **/
+.post-63 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/weld-ed-trailer-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Accreditation Banner **/
+.post-115 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/instructor-thumbs-up-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Welding Certification Banner **/
+.post-120 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/** Educator Resources Banner **/
+.post-128 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-station-work-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/** Underserved Banner **/
+.post-143 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/underrepresented-banner-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Training & Education Banner **/
+.post-152 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-older-weber-lab-shoot-discussion-2x-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Fabtech Banner **/
 .post-155 .subpage-header {
   background-image: url(http://localhost/wp-content/uploads/2022/02/fabtech-title-banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+/** Affiliates Banner **/
+.post-166 .subpage-header {
+  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-spark-smoke-1-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 }
 
 .entry-title {
@@ -696,6 +807,13 @@ header.subpage-header {
   background-color: #4C5EA8;
   top: 170px;
   margin: 0 10px;
+}
+
+/** About Entry Title **/
+@media only screen and (min-width: 768px) {
+  .post-53 .subpage-header .entry-title {
+    top: 372px;
+  }
 }
 
 .workshops-header .entry-title {

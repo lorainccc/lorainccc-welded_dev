@@ -2,33 +2,7 @@
 ***** Header
 ****/
 
-/********** nacep.com nav copy *********************/
-.main-navigation ul ul {
-    position: absolute;
-    list-style-type: none;
-    padding: 0px;
-    background: map-get($colors, "primary-blue");
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-    width: 350px;
-    z-index: 999;
-    top: 45px;
-  }
-  
-  .main-navigation ul ul li:hover > ul,
-  .main-navigation ul ul li.focus > ul {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .main-navigation ul li:hover > ul,
-  .main-navigation ul li.focus > ul {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  /********************* end nacep ************************/
+
 
   /********************** original _s **********************/
   .main-navigation li {
@@ -69,11 +43,11 @@
   #primary-menu li a {
     box-sizing: border-box;
     font-family: "open-sans", sans-serif;
-    // font-weight: bold;
     text-transform: uppercase;
     transition: color 0.5s;
     letter-spacing: 2px;
     padding: 10px 18px;
+    padding-right: 27px;
     display: inline-block;
     -webkit-font-smoothing: auto;
   }
@@ -85,8 +59,7 @@
   
   #primary-menu > li > a:hover {
     color: map-get($colors, "blue2");
-    /*transform: scale(1.02);*/
-    border: 2px solid rgb(var(--primary-blue));
+    border: 2px solid rgb(var(--blue2));
   }
   
   .wp-block-social-links {
@@ -105,7 +78,7 @@
   }
   
   ul.sub-menu > li:hover {
-    background-color: rgb(var(--blue2));
+    background-color: rgb(var(--blue2)) !important;
   }
   
   ul.sub-menu > li > a:before {
@@ -172,7 +145,6 @@
   
   .nav-search {
     margin-bottom: 10px;
-    /* max-width: 300px; */
     width: 100%;
   }
   
@@ -199,3 +171,57 @@
   #search-icon {
     fill: #FFF;
   }
+
+/********** nacep.org nav copy *********************/
+.main-navigation ul ul {
+  position: absolute;
+  list-style-type: none;
+  padding: 0px;
+  background: map-get($colors, "primary-blue");
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  width: 350px;
+  z-index: 999;
+  top: 45px;
+  margin-left: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+ul#primary-menu li.menu-item-has-children {
+  position: relative;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+ul#primary-menu li.menu-item-has-children > a::before {
+  content: ">";
+  position: absolute;
+  font-size: 20px;
+  font-family: monospace;
+  line-height: 1;
+  right: 7px;
+  top: 10px;
+  transform: rotate(0deg);
+  transition: all 0.3s;
+}
+
+ul#primary-menu li.menu-item-has-children > a:hover::before {
+  transform: rotate(90deg);
+  color: rgb(var(--blue2));
+  top: 12px;
+}
+
+/********************* end nacep ************************/
