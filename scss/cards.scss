@@ -69,9 +69,11 @@
         opacity: 0.1;
         width: 80%;
         max-width: 700px;
+        z-index: 1;
     }
     &__content {
         padding: 6%;
+        z-index: 100;
     }
     &__title {
         color: rgb(var(--white));

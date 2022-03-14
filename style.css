@@ -220,9 +220,11 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   opacity: 0.1;
   width: 80%;
   max-width: 700px;
+  z-index: 1;
 }
 .card-solid-bg__content {
   padding: 6%;
+  z-index: 100;
 }
 .card-solid-bg__title {
   color: rgb(var(--white));
@@ -520,6 +522,9 @@ section.padded-half {
 section.padded-full {
   padding: 4em 0;
 }
+section.padded-max {
+  padding: 7em 0;
+}
 
 .banner-full {
   min-height: 400px;
@@ -599,6 +604,7 @@ section.padded-full {
   margin: 40px auto;
   font-style: italic;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .main-content-section {
@@ -609,7 +615,10 @@ section.padded-full {
 }
 
 section.featured-items {
-  background-image: url();
+  background-image: url(http://localhost/wp-content/uploads/2022/03/home-feature-background-light-grey-scaled.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
 }
 section.featured-items p {
   line-height: 1.3;
@@ -712,7 +721,7 @@ header.subpage-header {
 
 /** About Banner **/
 .post-53 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-auto-weld-1-2x.jpg);
+  background-image: url(http://localhost/wp-content/uploads/2022/03/weld-ed-about-us-group-photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -723,6 +732,7 @@ header.subpage-header {
   }
 }
 
+/** Regional Centers **/
 .post-55 .subpage-header {
   background-image: url(http://localhost/wp-content/uploads/2022/03/banner-auto-weld-1-2x.jpg);
   background-repeat: no-repeat;
@@ -854,6 +864,10 @@ section.news-articles {
   background: #000 center top/cover url(http://localhost/wp-content/uploads/2022/02/news-section-image-background-scaled.jpg) no-repeat;
 }
 
+section.become-affiliate {
+  background-image: linear-gradient(135deg, rgba(var(--blue3), 1) 30%, rgba(var(--carbon), 0.7) 50%, rgba(var(--spark), 0.7) 79%, rgba(var(--spark), 1));
+}
+
 ul.square-list {
   list-style: none;
   /* Remove default bullets */
@@ -949,8 +963,4 @@ footer h2 {
 
 .footer-spark-right {
   right: 0;
-}
-
-section.become-affiliate {
-  background-image: linear-gradient(135deg, rgba(var(--blue3), 1) 30%, rgba(var(--carbon), 0.7) 50%, rgba(var(--spark), 0.7) 79%, rgba(var(--spark), 1));
 }
