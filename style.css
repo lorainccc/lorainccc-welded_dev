@@ -725,11 +725,9 @@ header.subpage-header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-}
-@media only screen and (min-width: 768px) {
-  .post-53 .subpage-header {
-    min-height: 800px;
-  }
+  /*     @media only screen and (min-width: 768px) {
+        min-height: 800px;
+      } */
 }
 
 /** Regional Centers **/
@@ -820,12 +818,11 @@ header.subpage-header {
 }
 
 /** About Entry Title **/
-@media only screen and (min-width: 768px) {
-  .post-53 .subpage-header .entry-title {
-    top: 372px;
-  }
-}
-
+/*   .post-53 .subpage-header .entry-title {
+    @media only screen and (min-width: 768px) {
+      top: 372px;    
+    }
+  } */
 .workshops-header .entry-title {
   padding: 1.5em 1em 1em;
 }
@@ -833,7 +830,7 @@ header.subpage-header {
 section.featured-items .row {
   width: 100%;
   max-width: 1450px;
-  padding: 60px 3vw;
+  padding: 0 1vw;
   display: flex;
   flex-direction: column;
 }
