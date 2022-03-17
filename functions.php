@@ -184,7 +184,7 @@ function lorainccc_welded_foundation_scripts() {
 	
 	wp_enqueue_script( 'foundation-init-js', get_stylesheet_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
 	
-		/* Foundation Icons */
+	/* Foundation Icons */
 	if ( wp_style_is( 'foundation_font_icon_css', 'enqueued' ) ) {
 		return;
 	}else{

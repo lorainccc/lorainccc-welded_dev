@@ -2,7 +2,6 @@
 **** Colors 
 ***/
 
-
 :root {
   --primary-blue: 41, 51, 92;
   --blue2: 76, 94, 168;
@@ -17,6 +16,7 @@
   --light-gray: 194, 194, 194;
   --white: 255, 255, 255;
 }
+/* use with rgb() like rgb(var(--blue2)); */
 
 $colors:
   (

@@ -1,13 +1,14 @@
 Full Banner (content-banner.php)
     As of now this element is used on the Home and Workshops Page
     It is a full width banner with css background image and a text box overlay
-    the class name is 'banner-full'
-    the background image is set by the Featured Image of the post
-    the overlaid text content is managed in the 'banner-text' custom field, managed on the edit page in wordpress. Use markup in the custom-field value and style with css.
+    The class name is 'banner-full'
+    The background image is set by the Featured Image of the post
+    The overlaid text content is managed in the 'banner-text' custom field, managed on the edit page in wordpress. Use markup in the custom-field value and style with css.
 
 Mobile menu
     LCCC code in /js/funcitons.js
     Ask Joe to help implement or if there is documentation I can follow.
+    Using Mobile Menu plug is for now.
 
 Accessibility
 -------------
@@ -19,14 +20,8 @@ Is there a way to do it in the register?
 
 Redundant alt tags on Logo
 
-Punch list
--------------
-1. Uniform button text color, text hover, text visited
-2. Switch out page banners
-3. Mobile menu
-4. And leftover responsive issues after mobile menu is in place
-5. Images for underrepresented, workshops and fabtech
+Resource urls in css are relative
 
-
-
+Absolute links to resources that need search replace for each migration
+--- footer-spark icons in footer.php
 

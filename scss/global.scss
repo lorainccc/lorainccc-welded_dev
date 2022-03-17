@@ -2,6 +2,22 @@
 **** GLOBAL ****
 ***/
 
+.centered-text {
+    text-align: center;
+}
+
+.--shadow {
+    box-shadow: 0 0 11px 0 #cccccc;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 64em) {
+        flex-direction: row;
+    }
+}
+
 /*********** RESTORE _s LINK STYLES ****************/
 
  a {
@@ -48,4 +64,35 @@ a:active {
 
   #page {
 	  overflow-x: hidden;
+  }
+
+  h1 {
+    font-family: "Lato", sans-serif;
+    color: map-get($colors, "primary-blue");
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    @media #{$target-tablet-under} {
+      font-size: 2em;
+    }
+  }
+  
+  h2 {
+    font-family: "Lato", sans-serif;
+    color: map-get($colors, "primary-blue");
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0 0 9px;
+    @media #{$target-tablet-under} {
+      font-size: 1.8em;
+    }
+  }
+
+  h3 {
+    font-family: "Lato", sans-serif;
+    color: map-get($colors, "primary-blue");
+    font-weight: 500;
+    font-size: 1.3em;
+    margin: 0 0 9px;
   }

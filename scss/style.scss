@@ -9,26 +9,9 @@
  License: GNU General Public License v2 or later 
  License URI: http://www.gnu.org/licenses/gpl-2.0.html 
  Text Domain:  lorainccc-welded
- /*!
- /************/
+************/
 
- @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
-.centered-text {
-    text-align: center;
-}
-
-.--shadow {
-    box-shadow: 0 0 11px 0 #cccccc;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: column;
-    @media (min-width: 64em) {
-        flex-direction: row;
-    }
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @import 'variables';
 @import 'functions';

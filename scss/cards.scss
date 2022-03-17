@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    //padding: 10%;
     height: 100%;
     &__header-image {
         &__image {
@@ -18,7 +17,6 @@
         height: 100%;
     }
     &__title {
-        //margin: 0;
         font-size: 1.7em !important;
         width: 100%;
     }
@@ -34,8 +32,9 @@
     }
 }
 
+/** Used in feature section of home **/
 .card-full-feature {
-    background-image: url(http://localhost/wp-content/uploads/2022/02/industrial-affiliate-header-image.jpg);
+    background-image: url(../../wp-content/uploads/2022/02/industrial-affiliate-header-image.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -49,20 +48,17 @@
     }
     &__title {
         color: rgb(var(--white));
-        //font-family: $lato;
-        //font-size: 1.7em;
-        //font-weight: bold;
     }
     &__text {
         color: rgb(var(--white));
     }
 }
 
+/** used in feature section of home, with spark icon background **/
 .card-solid-bg {
     position: relative;
-    //padding: 6%;
     &::after {
-        content: url(http://localhost/wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
+        content: url(../../wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
         position: absolute;
         bottom: -11px;
         left: 0;
@@ -96,6 +92,7 @@
     @include flex-row();
 }
 
+/** general use on subpages **/
 .card-article {
     border: none;
     flex: 1;
