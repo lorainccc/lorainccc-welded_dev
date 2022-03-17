@@ -38,7 +38,7 @@
 
 /** Used in feature section of home **/
 .card-full-feature {
-    background-image: url(../../wp-content/uploads/2022/02/industrial-affiliate-header-image.jpg);
+    background-image: url(../../uploads/2022/02/industrial-affiliate-header-image.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@
 .card-solid-bg {
     position: relative;
     &::after {
-        content: url(../../wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
+        content: url(../../uploads/2022/01/corner-spark-bottom-left.svg);
         position: absolute;
         bottom: -11px;
         left: 0;
