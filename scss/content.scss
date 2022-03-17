@@ -111,7 +111,7 @@ section {
 
 
 section.featured-items {
-  background-image: url(../../wp-content/uploads/2022/03/home-feature-background-light-grey-scaled.jpg);
+  background-image: url(../../uploads/2022/03/home-feature-background-light-grey-scaled.jpg);
   background-size: cover;
   background-position-x: center;
   background-position-y: bottom;
@@ -140,12 +140,12 @@ section.featured-items {
 }
 
 .card.instructor-training {
-  background-image: url(../../wp-content/uploads/2022/02/weld-ed-home-feature-background-2.jpg);
+  background-image: url(../../uploads/2022/02/weld-ed-home-feature-background-2.jpg);
   grid-area: large-feature-1;
 }
 
 .card.technical-research {
-  background-image: url(../../wp-content/uploads/2022/02/weld-ed-home-feature-background-3.jpg);
+  background-image: url(../../uploads/2022/02/weld-ed-home-feature-background-3.jpg);
   grid-area: large-feature-2;
   justify-content: end;
 }
@@ -161,7 +161,7 @@ section.featured-items {
 section.featured-video {
   .row.video-wrapper {
     padding: 3vw;
-    background-image: url(../../wp-content/uploads/2022/02/featured-video-background-scaled.jpg);
+    background-image: url(../../uploads/2022/02/featured-video-background-scaled.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -170,7 +170,7 @@ section.featured-video {
 
 section.news-articles {
   padding: 60px 3vw;
-  background: #000 center top / cover url(../../wp-content/uploads/2022/02/news-section-image-background-scaled.jpg) no-repeat;
+  background: #000 center top / cover url(../../uploads/2022/02/news-section-image-background-scaled.jpg) no-repeat;
 }
 
 /****
@@ -184,73 +184,73 @@ header.subpage-header {
   align-items: center;
   position: relative;
   /** default banner image **/
-  background-image: url(../../wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
+  background-image: url(../../uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
   margin-bottom: 7em;
 }
 
 /** Mission & Focus Banner **/
 .post-2 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/banner-multiple-welders-2x.jpg);
+  background-image: url(../../uploads/2022/03/banner-multiple-welders-2x.jpg);
   @include bg-img-placement(top, center);
 }
 
 /** About Banner **/
 .post-53 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/weld-ed-about-us-group-photo.jpg);
+  background-image: url(../../uploads/2022/03/weld-ed-about-us-group-photo.jpg);
   @include bg-img-placement(center, center);
 }
 
 /** Regional Centers **/
 .post-55 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/banner-auto-weld-1-2x.jpg);
+  background-image: url(../../uploads/2022/03/banner-auto-weld-1-2x.jpg);
   @include bg-img-placement(center, center);
 }
 
 /** Industry Partners Banner **/
 .post-63 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/weld-ed-trailer-2x.jpg);
+  background-image: url(../../uploads/2022/03/weld-ed-trailer-2x.jpg);
   @include bg-img-placement(center, center);
 }
 
 /** Accreditation Banner **/
 .post-115 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/instructor-thumbs-up-2x.jpg);
+  background-image: url(../../uploads/2022/03/instructor-thumbs-up-2x.jpg);
   @include bg-img-placement(center, center);
 }
 
 /** Welding Certification Banner **/
 .post-120 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
+  background-image: url(../../uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
   @include bg-img-placement(top, center);
 }
 
 /** Educator Resources Banner **/
 .post-128 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/banner-station-work-2x.jpg);
+  background-image: url(../../uploads/2022/03/banner-station-work-2x.jpg);
   @include bg-img-placement(top, center);
 }
 
 /** Underserved Banner **/
 .post-143 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/underrepresented-banner-2x.jpg);
+  background-image: url(../../uploads/2022/03/underrepresented-banner-2x.jpg);
   @include bg-img-placement(center, center);
 }
 
 /** Training & Education Banner **/
 .post-152 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/banner-older-weber-lab-shoot-discussion-2x-2x.jpg);
+  background-image: url(../../uploads/2022/03/banner-older-weber-lab-shoot-discussion-2x-2x.jpg);
   @include bg-img-placement(center, center);
 }
 
 /** Fabtech Banner **/
 .post-155 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/02/fabtech-title-banner.jpg);
+  background-image: url(../../uploads/2022/02/fabtech-title-banner.jpg);
   @include bg-img-placement(center, center);
 }
 
 /** Affiliates Banner **/
 .post-166 .subpage-header {
-  background-image: url(../../wp-content/uploads/2022/03/banner-spark-smoke-1-2x.jpg);
+  background-image: url(../../uploads/2022/03/banner-spark-smoke-1-2x.jpg);
   @include bg-img-placement(top, center);
 }
 
