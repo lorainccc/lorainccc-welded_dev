@@ -10,27 +10,8 @@
  License: GNU General Public License v2 or later 
  License URI: http://www.gnu.org/licenses/gpl-2.0.html 
  Text Domain:  lorainccc-welded
- /*!
- /************/
+************/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-.centered-text {
-  text-align: center;
-}
-
-.--shadow {
-  box-shadow: 0 0 11px 0 #cccccc;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 64em) {
-  .flex-row {
-    flex-direction: row;
-  }
-}
-
 /***
 **** Colors 
 ***/
@@ -49,15 +30,28 @@
   --white: 255, 255, 255;
 }
 
-/****
-***** Typography
-****/
-/*****
-****** Layout
-*****/
+/* use with rgb() like rgb(var(--blue2)); */
 /***
 **** GLOBAL ****
 ***/
+.centered-text {
+  text-align: center;
+}
+
+.--shadow {
+  box-shadow: 0 0 11px 0 #cccccc;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .flex-row {
+    flex-direction: row;
+  }
+}
+
 /*********** RESTORE _s LINK STYLES ****************/
 a {
   color: rgb(var(--primary-blue));
@@ -102,6 +96,41 @@ body {
 
 #page {
   overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  color: #29335C;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  color: #29335C;
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0 0 9px;
+}
+@media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.8em;
+  }
+}
+
+h3 {
+  font-family: "Lato", sans-serif;
+  color: #29335C;
+  font-weight: 500;
+  font-size: 1.3em;
+  margin: 0 0 9px;
 }
 
 /***
@@ -154,6 +183,9 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   color: #FFF;
 }
 
+/*****
+****** Cards
+*****/
 .card {
   border: none;
   background-color: #FFF;
@@ -186,8 +218,9 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   border-radius: 20px;
 }
 
+/** Used in feature section of home **/
 .card-full-feature {
-  background-image: url(http://localhost/wp-content/uploads/2022/02/industrial-affiliate-header-image.jpg);
+  background-image: url(../../wp-content/uploads/2022/02/industrial-affiliate-header-image.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -209,11 +242,12 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   color: rgb(var(--white));
 }
 
+/** used in feature section of home, with spark icon background **/
 .card-solid-bg {
   position: relative;
 }
 .card-solid-bg::after {
-  content: url(http://localhost/wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
+  content: url(../../wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
   position: absolute;
   bottom: -11px;
   left: 0;
@@ -249,6 +283,7 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   justify-content: center;
 }
 
+/** general use on subpages **/
 .card-article {
   border: none;
   flex: 1;
@@ -295,7 +330,9 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
 /**** 
 ***** Header
 ****/
-/********************** original _s **********************/
+/*****
+****** Original _s Nav
+******/
 .main-navigation li {
   position: relative;
 }
@@ -321,7 +358,12 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
     display: flex;
   }
 }
-/*************** end original _s ******************/
+/****
+***** end original _s nav
+*****/
+/****
+***** Main Navigation
+****/
 .main-navigation {
   display: flex;
   width: 100%;
@@ -348,10 +390,6 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
 #primary-menu > li > a:hover {
   color: #4C5EA8;
   border: 2px solid rgb(var(--blue2));
-}
-
-.wp-block-social-links {
-  margin-bottom: 10px;
 }
 
 .sub-menu {
@@ -396,11 +434,6 @@ ul.sub-menu > li > a {
 
 .site-header-links {
   flex-grow: 1;
-}
-
-.header__widgets {
-  /* display: flex;
-  justify-content: end; */
 }
 
 .header__widgets .header-tools__extra-column {
@@ -460,7 +493,13 @@ ul.sub-menu > li > a {
   fill: #FFF;
 }
 
-/********** nacep.org nav copy *********************/
+.wp-block-social-links {
+  margin-bottom: 10px;
+}
+
+/****
+***** Sub Menus
+****/
 .main-navigation ul ul {
   position: absolute;
   list-style-type: none;
@@ -512,7 +551,7 @@ ul#primary-menu li.menu-item-has-children > a:hover::before {
   top: 12px;
 }
 
-/********************* end nacep ************************/
+/************ End Submenus ***************/
 /***
 **** Content 
 ***/
@@ -596,6 +635,10 @@ section.padded-max {
   }
 }
 
+/****
+****** Home Page
+****/
+/** Home page directly below banner **/
 .workshop-announcement {
   font-family: "Lato", sans-serif;
   color: #29335C;
@@ -615,22 +658,38 @@ section.padded-max {
 }
 
 section.featured-items {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/home-feature-background-light-grey-scaled.jpg);
+  background-image: url(../../wp-content/uploads/2022/03/home-feature-background-light-grey-scaled.jpg);
   background-size: cover;
   background-position-x: center;
   background-position-y: bottom;
+}
+section.featured-items .row {
+  width: 100%;
+  max-width: 1450px;
+  padding: 0 1vw;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 75em) {
+  section.featured-items .row {
+    display: grid;
+    grid-template-columns: [col] 40% [col] 16% [col] 40%;
+    grid-template-rows: [row] auto [row] 300px [row] 300px [row] auto;
+    grid-gap: 2%;
+    grid-template-areas: "large-feature-1 large-feature-1 ." "large-feature-1 large-feature-1 small-feature-1" "small-feature-2 large-feature-2 large-feature-2" ". large-feature-2 large-feature-2";
+  }
 }
 section.featured-items p {
   line-height: 1.3;
 }
 
 .card.instructor-training {
-  background-image: url(http://localhost/wp-content/uploads/2022/02/weld-ed-home-feature-background-2.jpg);
+  background-image: url(../../wp-content/uploads/2022/02/weld-ed-home-feature-background-2.jpg);
   grid-area: large-feature-1;
 }
 
 .card.technical-research {
-  background-image: url(http://localhost/wp-content/uploads/2022/02/weld-ed-home-feature-background-3.jpg);
+  background-image: url(../../wp-content/uploads/2022/02/weld-ed-home-feature-background-3.jpg);
   grid-area: large-feature-2;
   justify-content: end;
 }
@@ -641,6 +700,144 @@ section.featured-items p {
 
 .card.affiliate {
   grid-area: small-feature-2;
+}
+
+section.featured-video .row.video-wrapper {
+  padding: 3vw;
+  background-image: url(../../wp-content/uploads/2022/02/featured-video-background-scaled.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.news-articles {
+  padding: 60px 3vw;
+  background: #000 center top/cover url(../../wp-content/uploads/2022/02/news-section-image-background-scaled.jpg) no-repeat;
+}
+
+/****
+***** Banners
+****/
+header.subpage-header {
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+  align-items: center;
+  position: relative;
+  /** default banner image **/
+  background-image: url(../../wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
+  margin-bottom: 7em;
+}
+
+/** Mission & Focus Banner **/
+.post-2 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/banner-multiple-welders-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/** About Banner **/
+.post-53 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/weld-ed-about-us-group-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Regional Centers **/
+.post-55 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/banner-auto-weld-1-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Industry Partners Banner **/
+.post-63 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/weld-ed-trailer-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Accreditation Banner **/
+.post-115 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/instructor-thumbs-up-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Welding Certification Banner **/
+.post-120 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/** Educator Resources Banner **/
+.post-128 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/banner-station-work-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/** Underserved Banner **/
+.post-143 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/underrepresented-banner-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Training & Education Banner **/
+.post-152 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/banner-older-weber-lab-shoot-discussion-2x-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Fabtech Banner **/
+.post-155 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/02/fabtech-title-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/** Affiliates Banner **/
+.post-166 .subpage-header {
+  background-image: url(../../wp-content/uploads/2022/03/banner-spark-smoke-1-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+/******************** End Banners ************************/
+.entry-title {
+  text-align: center;
+  max-width: 800px;
+  padding: 1.5em 1em;
+  position: relative;
+  margin: 0 auto;
+}
+
+.subpage-header .entry-title {
+  color: #fff;
+  background-color: #4C5EA8;
+  top: 170px;
+  margin: 0 10px;
+}
+
+/****
+***** Workshops Page
+****/
+.workshops-header .entry-title {
+  padding: 1.5em 1em 1em;
 }
 
 .workshop__intro {
@@ -665,209 +862,12 @@ ul.workshop-modules__list .card {
   border-radius: 10px;
 }
 
-h1 {
-  font-family: "Lato", sans-serif;
-  color: #29335C;
-  font-weight: 700;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-@media only screen and (max-width: 767px) {
-  h1 {
-    font-size: 2em;
-  }
-}
-
-h2 {
-  font-family: "Lato", sans-serif;
-  color: #29335C;
-  font-weight: 700;
-  font-size: 2em;
-  margin: 0 0 9px;
-}
-@media only screen and (max-width: 767px) {
-  h2 {
-    font-size: 1.8em;
-  }
-}
-
-h3 {
-  font-family: "Lato", sans-serif;
-  color: #29335C;
-  font-weight: 500;
-  font-size: 1.3em;
-  margin: 0 0 9px;
-}
-
-header.subpage-header {
-  display: flex;
-  justify-content: center;
-  min-height: 400px;
-  align-items: center;
-  position: relative;
-  /** default banner image **/
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
-  margin-bottom: 7em;
-}
-
-/** Mission & Focus Banner **/
-.post-2 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-multiple-welders-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
-/** About Banner **/
-.post-53 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/weld-ed-about-us-group-photo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  /*     @media only screen and (min-width: 768px) {
-        min-height: 800px;
-      } */
-}
-
-/** Regional Centers **/
-.post-55 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-auto-weld-1-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/** Industry Partners Banner **/
-.post-63 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/weld-ed-trailer-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/** Accreditation Banner **/
-.post-115 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/instructor-thumbs-up-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/** Welding Certification Banner **/
-.post-120 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-pipe-top-sparks-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
-/** Educator Resources Banner **/
-.post-128 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-station-work-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
-/** Underserved Banner **/
-.post-143 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/underrepresented-banner-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/** Training & Education Banner **/
-.post-152 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-older-weber-lab-shoot-discussion-2x-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/** Fabtech Banner **/
-.post-155 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/02/fabtech-title-banner.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/** Affiliates Banner **/
-.post-166 .subpage-header {
-  background-image: url(http://localhost/wp-content/uploads/2022/03/banner-spark-smoke-1-2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-}
-
-.entry-title {
-  text-align: center;
-  max-width: 800px;
-  padding: 1.5em 1em;
-  position: relative;
-  margin: 0 auto;
-}
-
-.subpage-header .entry-title {
-  color: #fff;
-  background-color: #4C5EA8;
-  top: 170px;
-  margin: 0 10px;
-}
-
-/** About Entry Title **/
-/*   .post-53 .subpage-header .entry-title {
-    @media only screen and (min-width: 768px) {
-      top: 372px;    
-    }
-  } */
-.workshops-header .entry-title {
-  padding: 1.5em 1em 1em;
-}
-
-section.featured-items .row {
-  width: 100%;
-  max-width: 1450px;
-  padding: 0 1vw;
-  display: flex;
-  flex-direction: column;
-}
-@media only screen and (min-width: 75em) {
-  section.featured-items .row {
-    display: grid;
-    grid-template-columns: [col] 40% [col] 16% [col] 40%;
-    grid-template-rows: [row] auto [row] 300px [row] 300px [row] auto;
-    grid-gap: 2%;
-    grid-template-areas: "large-feature-1 large-feature-1 ." "large-feature-1 large-feature-1 small-feature-1" "small-feature-2 large-feature-2 large-feature-2" ". large-feature-2 large-feature-2";
-  }
-}
-
-section.featured-video .row.video-wrapper {
-  padding: 3vw;
-  background-image: url(http://localhost/wp-content/uploads/2022/02/featured-video-background-scaled.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-section.news-articles {
-  padding: 60px 3vw;
-  /*     background-position: center top;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(http://localhost/wp-content/uploads/2022/02/news-section-image-background-scaled.jpg); */
-  background: #000 center top/cover url(http://localhost/wp-content/uploads/2022/02/news-section-image-background-scaled.jpg) no-repeat;
-}
-
 section.become-affiliate {
   background-image: linear-gradient(135deg, rgba(var(--blue3), 1) 30%, rgba(var(--carbon), 0.7) 50%, rgba(var(--spark), 0.7) 79%, rgba(var(--spark), 1));
 }
 
 ul.square-list {
   list-style: none;
-  /* Remove default bullets */
   margin-left: 1em;
 }
 
@@ -875,15 +875,10 @@ ul.square-list li::before {
   content: "■";
   /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #F2A71E;
-  /* Change the color */
   font-weight: bold;
-  /* If you want it to be bold */
   display: inline-block;
-  /* Needed to add space between the bullet and the text */
   width: 1em;
-  /* Also needed for space (tweak if needed) */
   margin-left: -1em;
-  /* Also needed for space (tweak if needed) */
 }
 
 /***
