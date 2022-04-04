@@ -247,7 +247,7 @@ a.button:not(.button--yellow):hover, a.button:not(.button--solid-yellow):hover {
   position: relative;
 }
 .card-solid-bg::after {
-  content: url(../../uploads/2022/01/corner-spark-bottom-left.svg);
+  content: url(http://localhost/wp-content/uploads/2022/01/corner-spark-bottom-left.svg);
   position: absolute;
   bottom: -11px;
   left: 0;
@@ -947,6 +947,11 @@ footer h2 {
   bottom: 0;
   width: 440px;
   opacity: 0.3;
+}
+@media only screen and (max-width: 767px) {
+  .footer-spark {
+    display: none;
+  }
 }
 
 .footer-spark-left {

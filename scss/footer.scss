@@ -65,6 +65,9 @@
     bottom: 0;
     width: 440px;
     opacity: 0.3;
+    @media #{$target-tablet-under} {
+      display: none;
+    }
   }
   
   .footer-spark-left {
